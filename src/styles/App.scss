@@ -1,0 +1,56 @@
+.webTitle,
+.webSubTitle {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: left;
+}
+
+.webTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.webSubTitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+ 
+}
+
+// Tablet
+@media (min-width: 768px) {
+  .webTitle {
+    font-size: 2.5rem;
+  }
+
+  .webSubTitle {
+    font-size: 1.2rem;
+  }
+}
+
+// Desktop
+@media (min-width: 1024px) {
+  .webTitle {
+    font-size: 3rem;
+  }
+
+  .webSubTitle {
+    font-size: 1.4rem;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+}
+
+main {
+  padding-top: 80px; // o el alto exacto del navbar
+}
