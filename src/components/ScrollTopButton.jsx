@@ -1,9 +1,12 @@
 // src/components/ScrollTopButton.jsx
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/scrollTop.scss';
+import { scrollToSection } from './ScrollToSection';
 
 function ScrollTopButton() {
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -14,11 +17,17 @@ function ScrollTopButton() {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
+  const handleClick = () => {
+    navigate('/');
+    window.scrollTo(0, 0); // por si acaso
+    setTimeout(() => scrollToSection('inicio'), 300); // espera más para asegurar que Home se montó
+  };
+
   return (
     visible && (
-      <a href="#inicio" className="scroll-top" aria-label="Volver arriba">
+      <button className="scroll-top" onClick={handleClick} aria-label="Volver arriba">
         ↑
-      </a>
+      </button>
     )
   );
 }

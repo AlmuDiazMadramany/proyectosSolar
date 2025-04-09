@@ -1,34 +1,69 @@
-// src/components/Navbar.jsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { scrollToSection } from './ScrollToSection';
 import '../styles/navbar.scss';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  const handleNavigateAndScroll = (sectionId) => {
+    navigate('/'); // Asegura que estás en Home
+    setTimeout(() => scrollToSection(sectionId), 100); // Espera breve para scroll
+    setMenuOpen(false); // Cierra el menú móvil si está abierto
+  };
 
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <a href="#inicio" className="logo">FreeEngineer</a>
+        <span
+          className="logo"
+          onClick={() => handleNavigateAndScroll('inicio')}
+          style={{ cursor: 'pointer' }}
+        >
+          FreeEngineer
+        </span>
 
-        {/* Menú completo */}
-        <ul className={`navbar__menu ${menuOpen ? 'open' : ''}`}>
-          <li><a href="#inicio" onClick={() => setMenuOpen(false)}>Inicio</a></li>
-          <li><a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a></li>
-          <li><a href="#faqs" onClick={() => setMenuOpen(false)}>Preguntas frecuentes</a></li>
-          <li><a href="#sobre-mi" onClick={() => setMenuOpen(false)}>Sobre mí</a></li>
-          <li>
-            <a href="#contacto" className="cta-button" onClick={() => setMenuOpen(false)}>
-              Consulta tu caso
-            </a>
-          </li>
-        </ul>
-
-        {/* Botón hamburguesa solo visible en móvil */}
-        <button className="navbar__toggle" onClick={toggleMenu} aria-label="Abrir menú">
+        <button
+          className="navbar__toggle"
+          onClick={toggleMenu}
+          aria-label="Abrir menú"
+        >
           ☰
         </button>
+
+        <ul className={`navbar__menu ${menuOpen ? 'open' : ''}`}>
+          <li>
+            <button onClick={() => handleNavigateAndScroll('inicio')}>
+              Inicio
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleNavigateAndScroll('servicios')}>
+              Servicios
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleNavigateAndScroll('faqs')}>
+              Preguntas frecuentes
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleNavigateAndScroll('sobre-mi')}>
+              Sobre mí
+            </button>
+          </li>
+          <li>
+            <button
+              className="cta-button"
+              onClick={() => handleNavigateAndScroll('contacto')}
+            >
+              Consulta tu caso
+            </button>
+          </li>
+        </ul>
       </div>
     </nav>
   );

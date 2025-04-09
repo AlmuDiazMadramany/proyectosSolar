@@ -1,7 +1,9 @@
 .webTitle,
 .webSubTitle {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem 2rem;
+  position: relative;
+  padding-top: 80px;  // Altura del navbar
+  margin-top: -80px;
   text-align: left;
 }
 

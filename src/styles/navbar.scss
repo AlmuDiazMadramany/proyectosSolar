@@ -53,11 +53,18 @@
     li {
       border-top: 1px solid #eee;
 
-      a {
+      a,
+      button {
         display: block;
+        width: 100%;
         padding: 1rem;
         text-decoration: none;
         color: #000;
+        background: none;
+        border: none;
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
       }
     }
 
@@ -79,8 +86,15 @@
       li {
         border: none;
 
-        a {
+        a,
+        button {
           padding: 0 1rem;
+          color: #000;
+          text-decoration: none;
+          background: none;
+          border: none;
+          font: inherit;
+          cursor: pointer;
         }
 
         .cta-button {
