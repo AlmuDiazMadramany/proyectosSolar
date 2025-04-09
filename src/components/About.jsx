@@ -17,7 +17,7 @@ function About() {
         </div>
         <img
           className="about__image"
-          src="/images/alvaro.jpg"
+          src="images/alvaro.jpeg"
           alt="Álvaro Sepena"
         />
       </div>

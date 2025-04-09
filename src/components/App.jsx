@@ -17,8 +17,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <div style={{ paddingTop: '80px' }}>
-        <h1 className='webTitle'>FreeEngineer</h1>
+      <div id='inicio' style={{ paddingTop: '90px' }}>
+        <h1 className='webTitle' >FreeEngineer</h1>
         <h3 className='webSubTitle'>Especialista en instalaciones fotovoltaicas, eficiencia energética y certificaciones técnicas</h3>
         <Services />
         <Faqs/>

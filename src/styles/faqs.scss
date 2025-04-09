@@ -1,5 +1,8 @@
 .faq {
-    padding: 2rem 2rem;
+  padding: 2rem 2rem;
+  position: relative;
+  padding-top: 80px;  // Altura del navbar
+  margin-top: -80px;
   
     &__title {
       font-size: 2rem;
