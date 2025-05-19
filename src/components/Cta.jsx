@@ -1,13 +1,14 @@
 // src/components/Cta.jsx
 import '../styles/cta.scss';
+import { Link } from 'react-router-dom';
 
 function Cta() {
   return (
     <section className="cta" id="contacto">
       <h2 className="cta__text">¿Tienes dudas?</h2>
-      <a href="https://" className="cta__button" target="_blank" rel="noopener noreferrer">
+      <Link to="/contacto" className="cta__button">
         Consulta tu caso
-      </a>
+      </Link>
     </section>
   );
 }

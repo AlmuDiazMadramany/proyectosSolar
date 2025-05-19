@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { scrollToSection } from './ScrollToSection';
 import '../styles/navbar.scss';
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,12 +58,13 @@ function Navbar() {
             </button>
           </li>
           <li>
-            <button
-              className="cta-button"
-              onClick={() => handleNavigateAndScroll('contacto')}
-            >
-              Consulta tu caso
-            </button>
+          <Link
+    to="/contacto"
+    className="cta-button"
+    onClick={() => setMenuOpen(false)}
+  >
+    Consulta tu caso
+  </Link>
           </li>
         </ul>
       </div>

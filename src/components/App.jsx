@@ -5,6 +5,8 @@ import Home from '../pages/Home';
 import ServicesDetail from '../pages/ServicesDetail';
 import '../styles/navbar.scss';
 import '../styles/footer.scss';
+import Form from '../pages/Form';
+
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/servicio/:id" element={<ServicesDetail />} />
+          <Route path="/contacto" element={<Form />} />
+
         </Routes>
       </main>
       <Footer />
