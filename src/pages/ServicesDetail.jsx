@@ -36,7 +36,7 @@ function ServiceDetail() {
         </a>
       </div>
 
-      <h3 className="other-title">Otros servicios</h3>
+      <h3 className="other-title">OTROS SERVICIOS</h3>
       <div className="other-services">
         {otherServices.map((s) => (
           <div className="service-card" key={s.id}>

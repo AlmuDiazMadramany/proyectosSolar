@@ -2,7 +2,7 @@
 export const services = [
     {
       id: 1,
-      title: 'Certificado de seguridad estructural para instalaciones fotovoltaicas',
+      title: 'CERTIFICADO DE SEGURIDAD ESTRUCTURAL PARA INSTALACIONES FOTOVOLTAICAS',
       image: 'proyectosSolar/images/servicio1.jpg',
       shortDescription: 'Verifico si una cubierta puede soportar el peso de una instalación solar.',
       content: `
@@ -26,7 +26,7 @@ export const services = [
     },
     {
       id: 2,
-      title: 'Certificado de eficiencia energética de viviendas existentes',
+      title: 'CERTIFICADO DE EFICIENCIA ENERGÉTICA DE VIVIENDAS EXISTENTES',
       image: 'proyectosSolar/images/servicio2.jpg',
       shortDescription: 'Certificado obligatorio para vender o alquilar tu vivienda en Madrid.',
       content: `
@@ -53,7 +53,7 @@ export const services = [
     },
     {
       id: 3,
-      title: 'Memorias y proyectos técnicos para instalaciones fotovoltaicas',
+      title: 'MEMORIAS Y PROYECTOS TÉCNICOS PARA INSTALACIONES FOTOVOLTAICAS',
       image: 'proyectosSolar/images/servicio3.jpg',
       shortDescription: 'Documentación necesaria para legalizar una instalación solar en el ayuntamiento.',
       content: `
@@ -69,8 +69,8 @@ export const services = [
     },
     {
       id: 4,
-      title: 'Firma o redacción de documentos técnicos bajo demanda',
-      image: 'proyectosSolar/images/servicio2.jpg',
+      title: 'FIRMA O REDACCIÓN DE DOCUMENTOS TÉCNICOS BAJO DEMANDA',
+      image: 'proyectosSolar/images/servicio4.jpg',
       shortDescription: '¿Necesitas un documento técnico firmado por un ingeniero? Consúltame.',
       content: `
         <p>Ofrezco la posibilidad de redactar o firmar documentos técnicos que requieran la intervención de un ingeniero.</p>

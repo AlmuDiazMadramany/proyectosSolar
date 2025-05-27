@@ -49,7 +49,7 @@ function Faq() {
 
   return (
     <section className="faq" id="faqs">
-      <h2 className="faq__title">Preguntas frecuentes</h2>
+      <h2 className="faq__title">PREGUNTAS FRECUENTES</h2>
       <div className="faq__list">
         {faqs.map((item, index) => (
           <div key={index} className={`faq__item ${openIndex === index ? 'open' : ''}`}>

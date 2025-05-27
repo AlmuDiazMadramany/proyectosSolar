@@ -1,3 +1,5 @@
+@import './variables';
+
 .services {
     padding: 2rem 2rem;
     position: relative;
@@ -5,7 +7,9 @@
     margin-top: -80px;
   
     &__title {
-      font-size: 1.8rem;
+      font-family: $font-section;
+      font-size: 2.5rem;
+      color: $color-primary;
       font-weight: bold;
       margin-bottom: 1.5rem;
       text-align: center;
@@ -53,7 +57,9 @@
     }
   
     &__name {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      font-family: $font-title;
+      color: $color-secondary;
       font-weight: 600;
       margin-bottom: 0.5rem;
       text-align: center;
@@ -61,6 +67,7 @@
   
     &__description {
       display: none;
+      font-family: $font-body;
       font-size: 0.95rem;
       color: #555;
       margin-bottom: 1rem;
@@ -73,10 +80,11 @@
   
     &__button {
       position: relative;
+      font-family: $font-button;
       z-index: 20;
       display: inline-block;
-      background: #000;
-      color: #fff;
+      background: $color-secondary;
+      color: $color-button-text;
       padding: 0.5rem 1rem;
       border-radius: 6px;
       text-decoration: none;
@@ -85,7 +93,7 @@
      
   
       &:hover {
-        background-color: #333;
+        background-color: $color-primary;
       }
     }
   }

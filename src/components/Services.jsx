@@ -24,7 +24,7 @@ const services = [
   {
     id: 4,
     title: 'Firma o redacción de documentos técnicos bajo demanda.',
-    image: 'images/servicio1.jpg',
+    image: 'images/servicio4.jpg',
     description: 'Si necesitas un documento firmado por un ingeniero, consúltame y vemos si puedo ayudarte.',
   },
 ];
@@ -32,7 +32,7 @@ const services = [
 function Services() {
   return (
     <section className="services" id="servicios">
-      <h2 className="services__title">Servicios</h2>
+      <h2 className="services__title">SERVICIOS</h2>
       <div className="services__grid">
         {services.map((service) => (
           <div className="service" key={service.id}>

@@ -12,21 +12,21 @@ function Navbar() {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   const handleNavigateAndScroll = (sectionId) => {
-    navigate('/'); // Asegura que estás en Home
-    setTimeout(() => scrollToSection(sectionId), 100); // Espera breve para scroll
-    setMenuOpen(false); // Cierra el menú móvil si está abierto
+    navigate('/'); 
+    setTimeout(() => scrollToSection(sectionId), 100); 
+    setMenuOpen(false); 
   };
 
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <span
+      <img
+          src="public/images/FreeEngineer_logo_grey.png"
+          alt="Logo FreeEngineer"
           className="logo"
           onClick={() => handleNavigateAndScroll('inicio')}
-          style={{ cursor: 'pointer' }}
-        >
-          FreeEngineer
-        </span>
+          style={{ cursor: 'pointer', height: '40px' }} // ajusta tamaño según necesites
+        />
 
         <button
           className="navbar__toggle"
